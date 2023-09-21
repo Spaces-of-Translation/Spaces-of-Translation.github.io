@@ -5,7 +5,49 @@ layout: default
   <header>
     <h1>{{ page.title | escape }}</h1>
   </header>
-
-  <div class="container">
-      {{ content }}
-  </div>
+  {{ content }}
+  <div id="table"></div>
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+  <script>
+   new gridjs.Grid({
+       columns: [
+           {id: 'Language_area', name: 'Lang Area'},
+           {id: 'Journal', name: 'Journal'},
+           {id: 'Year', name: 'PubDate'},
+           {id: 'Vol', name: 'Vol'},
+           {id: 'No', name: 'No'},
+           {id: 'Listed_Translator', name: 'Listed Translator'},
+           {id: 'Author', name: 'Author'},
+           {id: 'Title', name: 'Title'},
+           {id: 'Genre', name: 'Genre'},
+           {id: 'SL', name: 'SL'},
+           {id: 'TL', name: 'TL'},
+       ],
+       data: [
+           {% for member in site.data.translations %}
+           {
+               Language_area: "{{ member.Language_area}}",
+               Journal: "{{ member.Journal }}",
+               Year: "{{ member.Year }}",
+               Vol: "{{ member.Vol }}",
+               No: "{{ member.No }}",
+               Listed_Translator: "{{ member.Listed_Translator }}",
+               Author: "{{ member.Author }}",
+               Title: "{{ member.Title }}",
+               Genre: "{{ member.Genre }}",
+               SL: "{{ member.SL }}",
+               TL: "{{ member.TL }}",
+           },
+           {% endfor %}
+       ],
+       search: {
+           selector: (cell, rowIndex, cellIndex) => [0, 1, 4].includes(cellIndex) ? cell : null,
+       },
+       sort: true,
+       pagination: {
+           enabled: true,
+           limit: 20,
+       },
+   }).render(document.getElementById('table'));
+  </script>
+  <p>end of things</p>
