@@ -4,4 +4,4 @@ title: Translations
 datasource: small.tsv
 ---
 
-This is the content.
+No longer necessary.
