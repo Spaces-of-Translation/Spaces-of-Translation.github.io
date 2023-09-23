@@ -1,7 +1,5 @@
 - name: About
   link: /about/
-- name: Thunks
-  link: thunks
 - name: Translations
   link: translations
 - name: Translators
