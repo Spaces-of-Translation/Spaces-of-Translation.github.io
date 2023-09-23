@@ -4,4 +4,4 @@ title: Translations
 datasource: small.tsv
 ---
 
-No longer necessary.
+From thunks.
