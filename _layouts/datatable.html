@@ -1,12 +1,32 @@
 ---
 layout: default
 ---
+{% capture foo %}{{ site.baseurl }}/assets/{{page.datasource}}{% endcapture %}
 
-  <header>
-    <h1>{{ page.title | escape }}</h1>
-  </header>
-  {{ content }}
-  <div id="table"></div>
+<section class="section">
+    <div class="container">
+        <h1>Table for {{ foo }}</h1>
+        <p>Table for {{ foo }}</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Language_area</th>
+                    <th>Journal</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in site.data.small %}
+                <tr>
+                    <td>{{ row.Language_area}}</td>
+                    <td>{{ row.Journal }}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+<section class="section">
+    <div id="table"></div>
   <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
   <script>
    new gridjs.Grid({
@@ -50,3 +70,9 @@ layout: default
        },
    }).render(document.getElementById('table'));
   </script>
+
+</section>
+
+<div class="content">
+    {{ content }}
+</div>

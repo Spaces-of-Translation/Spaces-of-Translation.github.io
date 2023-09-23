@@ -1,0 +1,12 @@
+- name: About
+  link: /about/
+- name: Translations
+  link: /translations/
+- name: Translators
+  link: /translators/
+- name: Magazines
+  link: /magazines/
+- name: Blog
+  link: /blog/
+- name: Events
+  link: /events/

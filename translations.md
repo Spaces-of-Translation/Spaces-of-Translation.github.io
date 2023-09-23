@@ -1,6 +1,7 @@
 ---
-layout: data_table
-title: translations
-permalink: /translations/
+layout: datatable
+title: Translations
+datasource: small.tsv
 ---
-This is a table of translations.
+
+This is the content.
