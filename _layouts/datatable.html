@@ -2,6 +2,13 @@
 layout: default
 ---
 {% capture foo %}{{ site.baseurl }}/assets/{{page.datasource}}{% endcapture %}
+
+<section class="section">
+<div class="content">
+    {{ content }}
+</div>
+</section>
+
 <section class="section">
     <div class="container">
         <div id="table"></div>
@@ -43,6 +50,7 @@ layout: default
            selector: (cell, rowIndex, cellIndex) => [0, 1, 4].includes(cellIndex) ? cell : null,
        },
        sort: true,
+       resizable: true,
        pagination: {
            enabled: true,
            limit: 20,
