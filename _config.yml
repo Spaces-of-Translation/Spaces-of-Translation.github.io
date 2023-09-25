@@ -34,6 +34,14 @@ remote_theme: chrisrhymes/bulma-clean-theme
 plugins:
   - jekyll-feed
 
+collections:
+  magazines:
+    output: true
+    layout: magazine
+    show_sidebar: false
+    image: https://via.placeholder.com/800x600
+
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
