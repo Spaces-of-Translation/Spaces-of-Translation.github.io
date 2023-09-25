@@ -46,9 +46,7 @@ layout: default
            },
            {% endfor %}
        ],
-       search: {
-           selector: (cell, rowIndex, cellIndex) => [0, 1, 4].includes(cellIndex) ? cell : null,
-       },
+       search: true,
        sort: true,
        resizable: true,
        pagination: {
@@ -59,7 +57,3 @@ layout: default
   </script>
 
 </section>
-
-<div class="content">
-    {{ content }}
-</div>
