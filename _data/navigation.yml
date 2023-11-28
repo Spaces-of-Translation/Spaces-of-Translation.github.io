@@ -1,7 +1,7 @@
 - name: Translations database
   link: https://sea-lion-app-6zoh2.ondigitalocean.app/translations
 - name: Translators database
-  link: http://127.0.0.1:8000/translators
+  link: https://sea-lion-app-6zoh2.ondigitalocean.app/translators
 - name: Magazines
   link: magazines
 - name: Blog
