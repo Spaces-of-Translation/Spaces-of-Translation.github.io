@@ -1,12 +1,12 @@
-- name: About
-  link: /about/
-- name: Translations
-  link: translations
-- name: Translators
-  link: translators
+- name: Translations database
+  link: https://sea-lion-app-6zoh2.ondigitalocean.app/translations
+- name: Translators database
+  link: http://127.0.0.1:8000/translators
 - name: Magazines
   link: magazines
 - name: Blog
   link: /blog/
 - name: Events
   link: /events/
+- name: About
+  link: /about/
