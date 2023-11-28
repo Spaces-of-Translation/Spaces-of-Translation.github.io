@@ -5,8 +5,8 @@
 - name: Magazines
   link: magazines
 - name: Blog
-  link: /blog/
+  link: /blog
 - name: Events
-  link: /events/
+  link: /events
 - name: About
-  link: /about/
+  link: /about
